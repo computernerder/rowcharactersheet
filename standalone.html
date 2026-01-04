@@ -315,11 +315,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for label, slug in skills %}
-                            <tr data-skill="{{ label }}">
+                            {% for skill in skills %}
+                            <tr data-skill="{{ skill.label }}">
                                 <td><span class="checkbox"></span></td>
-                                <td class="skill-name">{{ label }}</td>
-                                <td></td>
+                                <td class="skill-name">{{ skill.label }}</td>
+                                <td>{{ skill.attr }}</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>

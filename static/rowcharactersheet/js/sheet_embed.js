@@ -6,9 +6,11 @@
   const abilities = data.ability_scores || {};
   const skills = data.skills || {};
 
-  const setField = (name, value) => {
+  const setField = (name, value, allowEmpty = false) => {
+    if (value === undefined || value === null) return;
+    if (!allowEmpty && value === "") return;
     const el = document.querySelector(`[data-field="${name}"]`);
-    if (el) el.textContent = value ?? "";
+    if (el) el.textContent = value;
   };
 
   setField("character_name", data.character_name || fallback.name || "");
