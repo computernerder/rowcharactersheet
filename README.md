@@ -7,6 +7,7 @@ This repo hosts the reusable character sheet template, static assets, and JS tha
 - `static/rowcharactersheet/blank_sheet.css` — Styles for all pages.
 - `static/rowcharactersheet/js/sheet_embed.js` — Fills the sheet from injected JSON.
 - `static/rowcharactersheet/images/` — Logos, QR art, corners/background.
+- `standalone.html` — Plain HTML variant with relative paths for non-Django use (ships with a sample data block).
 
 ## How to consume (Django)
 1) Add the repo as a submodule inside your project (e.g., at `rowcharactersheet/`).
@@ -18,6 +19,11 @@ This repo hosts the reusable character sheet template, static assets, and JS tha
    {% include "characters/sheet_embed.html" %}
    ```
 4) Ensure `collectstatic` runs so the assets are served. The template uses `{% static %}` for CSS/JS/images.
+
+## How to consume (standalone / non-Django)
+1) Serve or open `standalone.html` with the accompanying `static/rowcharactersheet/` folder in the same relative location.
+2) Edit the inline `sampleData` and `window.sheetFallback` near the bottom of `standalone.html` to inject your payload (matches the Django data contract below).
+3) Optional: point the QR image to your own URL by replacing the `static/rowcharactersheet/images/qrcode.png` path in `standalone.html`.
 
 ## Data contract
 The view must set:
