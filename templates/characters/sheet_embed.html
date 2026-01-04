@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="/blank_sheet.css?v=20260104b">
+{% load static %}
+<link rel="stylesheet" href="{% static 'rowcharactersheet/blank_sheet.css' %}?v=20260104b">
 <div class="sheet-embed" style="margin:20px auto; max-width:850px;">
   <!-- ==================== PAGE 1 ==================== -->
     <div class="page page-notes">
@@ -11,7 +12,7 @@
     <div class="header">
         <div class="header-top">
             <div class="header-left">
-                <img class="logo" src="/images/row_small_logo.png" alt="Realm of Warriors" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <img class="logo" src="{% static 'rowcharactersheet/images/row_small_logo.png' %}" alt="Realm of Warriors" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
                 <div class="logo-fallback">REALM OF WARRIORS</div>
                 
                 <div class="header-box">
@@ -336,10 +337,10 @@
 
   <!-- ==================== PAGE 2 ==================== -->
   <div class="page">
-    <img class="corner corner-tl" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
-    <img class="corner corner-tr" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
-    <img class="corner corner-bl" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
-    <img class="corner corner-br" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-tl" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-tr" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-bl" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-br" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
     <div class="page-footer">© 2026 MagiTomes LLC. Copying is permitted for personal use.</div>
 
     <!-- Page 2 Header -->
@@ -487,10 +488,10 @@
 
   <!-- ==================== PAGE 3 (DEFINITIONS / OVERFLOW) ==================== -->
   <div class="page">
-    <img class="corner corner-tl" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
-    <img class="corner corner-tr" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
-    <img class="corner corner-bl" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
-    <img class="corner corner-br" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-tl" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-tr" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-bl" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-br" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
     <div class="page-footer">© 2026 MagiTomes LLC. Copying is permitted for personal use.</div>
 
     <!-- Page 3 Header -->
@@ -557,10 +558,10 @@
 
   <!-- ==================== PAGE 4 (NOTES) ==================== -->
   <div class="page">
-    <img class="corner corner-tl" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
-    <img class="corner corner-tr" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
-    <img class="corner corner-bl" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
-    <img class="corner corner-br" src="/images/Corner.png" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-tl" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-tr" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-bl" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
+    <img class="corner corner-br" src="{% static 'rowcharactersheet/images/Corner.png' %}" alt="" onerror="this.style.display='none'">
     <div class="page-footer">© 2026 MagiTomes LLC. Copying is permitted for personal use.</div>
 
     <!-- Page 4 Header -->
@@ -597,4 +598,4 @@
         profession: "{{ character.profession|escapejs }}"
     };
 </script>
-<script src="/js/sheet_embed.js?v=20260104c"></script>
+<script src="{% static 'rowcharactersheet/js/sheet_embed.js' %}?v=20260104c"></script>
