@@ -217,6 +217,16 @@
   renderListWithOverflow('[data-list="features"]', '[data-list="features-overflow"]', featureItems, featureLabels);
   renderListWithOverflow('[data-list="talents"]', '[data-list="talents-overflow"]', talentItems, talentLabels);
 
+  // If explicit definitions are provided, always populate the overflow pages.
+  // This is used by PDF generation to ensure the definitions pages are filled
+  // even when the main list doesn't technically "overflow".
+  if (Array.isArray(data.feature_definitions) && data.feature_definitions.length) {
+    fillOverflowRich('[data-list="features-overflow"]', data.feature_definitions, "Feature");
+  }
+  if (Array.isArray(data.talent_definitions) && data.talent_definitions.length) {
+    fillOverflowRich('[data-list="talents-overflow"]', data.talent_definitions, "Talent");
+  }
+
   fillList('[data-list="proficiencies"]', data.proficiencies || []);
   fillList('[data-list="languages"]', data.languages || []);
 
