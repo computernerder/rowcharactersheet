@@ -398,7 +398,7 @@ table.inner th {
     font-size: 9pt;
     background: #fff;
 }
-.checkbox.checked::after { content: "✓"; }
+.checkbox.checked::after { content: "X"; }
 
 /* === WEAPONS TABLE === */
 .weapons-table th, .weapons-table td { font-size: 8pt; height: 22.6px; }
